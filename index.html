@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lent="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>vue</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container-fluid" id="app">
+        <div class="row">
+            <div class="col-md-12 header">
+                <div class="row">
+                    <div class="col-md-3 ">
+                        <img src="img/giphyseriesc.gif" class="image_logo" alt="">
+                    </div>
+
+
+                    <components is="gifsearch"></components>
+
+                    <div class="col-md-12 contein">
+                        <div class="row content_ch">
+                            <div class="col-md-3" v-for="gif in giphy">
+                                <img :src="gif.images.original.url" class="image_c">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+            <components is="gifs"></components>
+            <template id="input_gif">
+                    <div class="col-md-9 gifsearch">
+                        <input type = "text" id="input_s" v-model="query">
+                    </div>
+            </template>
+            <template id="conteiner_gif">
+                
+            </template>
+            <script type="text/javascript" src="js/jquery.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+
+            <script src="js/Vue.js"></script>
+            <script src="js/Vuex.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.4"></script>
+            <script src="js/mainJS.js"></script>
+
+
+</body>
+
+</html>
